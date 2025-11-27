@@ -1,0 +1,27 @@
+<DOCTYPI html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,
+    initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static',
+    filename='style.css') }}">
+</head>
+<body>
+    <h1>alunos cadastrados</h1>
+    <div class="container">
+        <ul>
+            {% for aluno in aluno %}
+            <li>
+                <a href="{{ url_for('detalhe_alunos', aluno_id=aluno.id) }}">
+                    {{ aluno.nome }} (ID: {{ aluno.id }})
+                </a>
+            </li>
+        {% else %}
+        <li>nenhum aluno cadastrado</li>
+        {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

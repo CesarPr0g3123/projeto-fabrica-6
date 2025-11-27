@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Detalhe do aluno</h1>
+    <div class="container">
+            <p><strong>ID: </strong> {{ aluno.id }}</p>
+            <p><strong>nome: </strong> {{ aluno.nome }}</p>
+            <p><strong>idade: </strong> {{ aluno.idade }}</p>
+            <p><strong>curso: </strong> {{ aluno.curso }}</p>
+
+            <img src="{{ aluno.image }}" alt="imagem do {{} aluno.nome}">
+
+        </div>
+</body>
+</html>
